@@ -1,16 +1,42 @@
-import React from 'react'
-// import Navbar from '../components/Navbar'
-// import Footer from '../components/Footer'
-import ProfilesData from '../components/ProfilesData'
+import React, {Component} from 'react'
 
-const Profiles = () => {
-  return (
-    <div>
-      {/* <Navbar/> */}
-      <ProfilesData />
-      {/* <Footer /> */}
-    </div>
-  )
+// import { Route, Routes, Link } from "react-router-dom";
+
+
+class Profiles extends Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+     profiles: []
+    };
+  }
+
+  render() {
+    console.log(this.props)
+    return (
+      <div className="App">
+        <h1 className="profiles-title">Profiles</h1>
+        <div  className="all profiles">
+        {this.props.profiles.map((profile, index) => {
+          return (
+              <div className="profile-container" key={index}>
+
+                        <h3 className="profile-name">{profile.name}</h3>
+                      {/* <Link to={'/detail/'+ profile._id}> */}
+                        <img src={profile.imgURL} />
+                      {/* </Link> */}
+                      
+                    
+              </div>
+          );
+        })}
+        </div>
+
+
+
+      </div>
+    );
+  }
 }
-
+          
 export default Profiles
