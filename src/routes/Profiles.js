@@ -1,7 +1,6 @@
+
 import React, {Component} from 'react'
-
-// import { Route, Routes, Link } from "react-router-dom";
-
+import "./ProfilesStyles.css"
 
 class Profiles extends Component {
    constructor(props) {
@@ -14,20 +13,21 @@ class Profiles extends Component {
   render() {
     console.log(this.props)
     return (
-      <div className="App">
+      <div className="all-profiles">
         <h1 className="profiles-title">Profiles</h1>
         <div  className="all profiles">
         {this.props.profiles.map((profile, index) => {
           return (
-              <div className="profile-container" key={index}>
+              <div className="card" key={index}>
 
                         <h3 className="profile-name">{profile.name}</h3>
                       {/* <Link to={'/detail/'+ profile._id}> */}
-                        <img src={profile.imgURL} />
+                        <img className="profile-img" src={profile.imgURL} alt="profile" />
                       {/* </Link> */}
-                      
+
                     
               </div>
+       
           );
         })}
         </div>
@@ -38,5 +38,5 @@ class Profiles extends Component {
     );
   }
 }
-          
+
 export default Profiles

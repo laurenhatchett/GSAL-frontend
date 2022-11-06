@@ -3,7 +3,8 @@ import "./index.css"
 import {Route, Routes } from "react-router-dom"
 import Home from "./routes/Home"
 import Profiles from "./routes/Profiles"
-
+import Navbar from './components/Navbar'
+import Footer from "./components/Footer"
 
 let baseURL = ""
 
@@ -48,11 +49,12 @@ componentDidMount(){
   return (
     <div className="App">
         <>
-      
+        <Navbar/>
       <Routes>
        <Route path="/" element={<Home/>}/>
        <Route path="/view-profiles" element={<Profiles profiles={this.state.profiles}/>}/>
       </Routes>
+      <Footer/>
      </>
     </div>
   );
