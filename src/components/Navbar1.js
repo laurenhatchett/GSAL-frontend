@@ -1,4 +1,4 @@
-import "./NavbarStyles.css"
+import "./Navbar1Styles.css"
 
 import React, {useState} from 'react'
 import {Link} from "react-router-dom"
@@ -32,6 +32,10 @@ const Navbar = () => {
         <li>
             <Link to ="/view-profiles">View Profiles</Link>
         </li>
+        <li>
+            <Link to ="/create">Create A Profiles</Link>
+        </li>
+        
         
         
       </ul>

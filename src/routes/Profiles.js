@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react'
 import "./ProfilesStyles.css"
-
+import Navbar2 from "../components/Navbar2"
 class Profiles extends Component {
    constructor(props) {
     super(props);
@@ -11,8 +11,8 @@ class Profiles extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
+     
       <div className="all-profiles">
         <h1 className="profiles-title">Profiles</h1>
         <div  className="all profiles">
@@ -27,7 +27,7 @@ class Profiles extends Component {
 
                     
               </div>
-       
+    
           );
         })}
         </div>
