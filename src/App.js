@@ -5,6 +5,8 @@ import Home from "./routes/Home"
 import Profiles from "./routes/Profiles"
 import Footer from "./components/Footer"
 import NewForm from "./components/NewForm"
+
+
 let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
@@ -34,7 +36,7 @@ componentDidMount(){
           } else {
             return [];
           }
-        })
+        }) 
         .then((data) => {
           console.log("data", data);
           //setState to be that data
@@ -43,14 +45,26 @@ componentDidMount(){
       }
 
       handleAddProfile = (profiles) => {
-        console.log(" first deck inside handleAddDeck", profiles)
+        console.log("profiles inside handleAddProfile", profiles)
          //copy the entire profiles array to a new array
          const copyProfiles = [...this.state.profiles];
        
-         // copyName.unshift(deck);
+         
          copyProfiles.unshift(profiles);
          this.setState({profiles: copyProfiles});
        };
+
+       handleDelete = (profiles) => {
+        fetch(baseURL + '/profiles/' + profiles._id, {
+          method: 'DELETE'
+        }).then( response => {
+          const findIndex = this.state.profiles.findIndex(profiles => profiles._id === profiles._id)
+          const copyProfiles = [...this.state.profiles]
+          copyProfiles.splice(findIndex, 1)
+          this.setState({profiles: copyProfiles})
+        })
+        console.log("profiles", profiles)
+      }
        
 
 
@@ -64,7 +78,8 @@ componentDidMount(){
       <Routes>
        <Route path="/" element={<Home/>}/>
        <Route path="/view-profiles" element={<Profiles profiles={this.state.profiles}/>}/>
-       <Route path="/create" element={<NewForm profiles={this.state.profiles}/>}/>
+       <Route path="/create" element={<NewForm handleAddProfile={this.handleAddProfile}/>}/>
+       <Route path="/view-profiles" element={<Profiles handleDeleteProfile={this.handleDeleteProfile}/>}/>
       </Routes>
       <Footer/>
      </>
