@@ -10,6 +10,7 @@ const Footer = () => {
     <div className="footer">
         <div className="footer-container">
             <div className="left">
+            <h3>LET'S CONNECT</h3>
                 <div className="phone">
                     <h4><FaPhone size={20} style={{color: "#fff" , marginRight: "2rem"}} />
                     720-492-4814

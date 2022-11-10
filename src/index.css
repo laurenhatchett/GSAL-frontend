@@ -39,4 +39,5 @@ color: #fff;
   background: grey;
   color: #fff;
   transition: 0.3s;
+  border-color: red;
 }

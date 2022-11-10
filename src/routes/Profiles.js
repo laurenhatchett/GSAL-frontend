@@ -1,7 +1,9 @@
 
 import React, {Component} from 'react'
 import "./ProfilesStyles.css"
-
+// import {Link} from "react-router-dom"
+import {AiOutlineDelete} from "react-icons/ai"
+// import {FiEdit} from "react-icons/fi"
 let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
@@ -14,7 +16,6 @@ class Profiles extends Component {
     this.state = {
      profiles: props.profiles
     };
-    console.log("this.state", props.profiles)
    }
   
   handleDelete = (profiles) => {
@@ -26,6 +27,7 @@ class Profiles extends Component {
       const copyProfiles = [...this.state.profiles]
       copyProfiles.splice(findIndex, 1)
       this.setState({profiles: copyProfiles})
+      window.location.reload()
     })
     console.log("profile deleted", profiles)
   }
@@ -45,8 +47,18 @@ class Profiles extends Component {
                       {/* <Link to={'/detail/'+ profile._id}> */}
                       {/* </Link> */}
                       <div className="btn-container">
-                      <button onClick={() => this.handleDelete(profile)} className='btn'>DELETE</button>
-
+                      <div className="delete-btn">
+                      <AiOutlineDelete  size={35} style={{color:"#222"}} onClick={() => this.handleDelete(profile)} />
+                      </div>
+                      <div>
+                      
+                      </div>
+                      {/* <div className="edit-btn">
+                      <Link to ={ "/edit/id" + profile.id}>Edit</Link>
+                      </div> */}
+                      {/* <div className="view-btn">
+                      <button onClick={() => this.handleView(profile)} className='btn'>VIEW BIO</button>
+                      </div> */}
                       </div>
 
                     

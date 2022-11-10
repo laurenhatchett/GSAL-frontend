@@ -5,6 +5,8 @@ import Home from "./routes/Home"
 import Profiles from "./routes/Profiles"
 import Footer from "./components/Footer"
 import NewForm from "./components/NewForm"
+import AboutUs from './routes/AboutUs'
+// import EditForm from './components/EditForm'
 
 
 let baseURL = ""
@@ -38,7 +40,7 @@ componentDidMount(){
           }
         }) 
         .then((data) => {
-          console.log("data", data);
+          // console.log("data", data);
           //setState to be that data
           this.setState({ profiles: data.profiles });
         });
@@ -48,24 +50,28 @@ componentDidMount(){
         console.log("profiles inside handleAddProfile", profiles)
          //copy the entire profiles array to a new array
          const copyProfiles = [...this.state.profiles];
-       
-         
          copyProfiles.unshift(profiles);
          this.setState({profiles: copyProfiles});
        };
 
-       handleDelete = (profiles) => {
-        fetch(baseURL + '/profiles/' + profiles._id, {
-          method: 'DELETE'
-        }).then( response => {
-          const findIndex = this.state.profiles.findIndex(profiles => profiles._id === profiles._id)
-          const copyProfiles = [...this.state.profiles]
-          copyProfiles.splice(findIndex, 1)
-          this.setState({profiles: copyProfiles})
-        })
-        console.log("profiles", profiles)
-      }
-       
+      //  handleDelete = (profiles) => {
+      //   fetch(baseURL + '/profiles/' + profiles._id, {
+      //     method: 'DELETE'
+      //   }).then( response => {
+      //     const findIndex = this.state.profiles.findIndex(profiles => profiles._id )
+      //     const copyProfiles = [...this.state.profiles]
+      //     copyProfiles.splice(findIndex, 1)
+      //     this.setState({profiles: copyProfiles})
+      //   })
+      //   console.log("profiles", profiles)
+      // }
+      
+      // handleEdit = (event,profiles) => {
+      // event.preventDefault()
+      //   console.log('hitting handleEdit in App.js')
+      // }
+
+      
 
 
       render () {
@@ -77,9 +83,14 @@ componentDidMount(){
         <>
       <Routes>
        <Route path="/" element={<Home/>}/>
+       <Route path="/about" element={<AboutUs/>}/>
        <Route path="/view-profiles" element={<Profiles profiles={this.state.profiles}/>}/>
        <Route path="/create" element={<NewForm handleAddProfile={this.handleAddProfile}/>}/>
-       <Route path="/view-profiles" element={<Profiles handleDeleteProfile={this.handleDeleteProfile}/>}/>
+       {/* <Route path="/view-profiles" element={<Profiles handleDeleteProfile={this.handleDeleteProfile}/>}/> */}
+      <Route path="/view-profiles" element={<Profiles/>}/>
+
+       {/* <Route path="/edit/:id" element={<EditForm profiles={this.state.profiles}/>}/> */}
+
       </Routes>
       <Footer/>
      </>

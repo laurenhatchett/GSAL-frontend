@@ -1,0 +1,89 @@
+.mask{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hero1img{
+    width: 100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.mask::after{
+    content:"";
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(77, 69, 69);
+    opacity: 0.6;
+}
+
+.hero{
+    height:100%;
+    width:100%;
+}
+
+.hero .content{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align : center;
+}
+
+
+.hero .content p{
+    font-size: 2rem;
+    font-weight: 50;
+    color:rgb(250, 249, 249);
+    font-family: 'Montserrat 900';
+}
+
+.content .btn {
+    margin: 1rem 0.2rem;
+    
+}
+.hero-btn-container{
+margin-top: 30px;
+
+}
+.donor-btn-container{
+margin-top: 50px;
+}
+.donor-btn {
+    
+  padding: 12px 32px;
+
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: rgb(255, 42, 0);
+  color: #222;
+  border: 1px solid #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.donor-btn:hover {
+    background: grey;
+    color: #fff;
+    transition: 0.3s;
+  }
+
+@media screen and (max-width: 640px){
+    .hero .content h1{
+        font-size: 3rem;
+    }
+    
+    .hero .content p{
+        font-size: 1.4rem;
+    }
+    btn btn-light{
+        font-size: .5rem;
+    }
+}
