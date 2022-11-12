@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import NewFormStyles from "./NewFormStyles.css"
+
 let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
@@ -87,7 +89,7 @@ class NewForm extends Component {
                       placeholder="name"
                       className="new-profile-input"
                   />
-                  <input 
+                  <textarea 
                       id="information"
                       type="text"
                       onChange={this.handleChange}
