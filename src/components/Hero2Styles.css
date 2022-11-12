@@ -3,8 +3,10 @@
     height: 100vh;
     position: relative;
 }
-
-.hero1img{
+.title-container{
+padding-top: 50px;
+}
+.hero2img{
     width: 100%;
     height:100%;
     background-size: cover;
@@ -19,7 +21,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(77, 69, 69);
+    background-color: rgb(131, 126, 126);
     opacity: 0.6;
 }
 
@@ -34,18 +36,25 @@
     top: 50%;
     left: 50%;
     text-align : center;
-    
 }
 
 
 .hero .content p{
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 50;
-    color:rgb(250, 249, 249);
+    color:rgb(9, 9, 9);
     font-family: 'Montserrat 900';
 }
 
+.about-info-container{
+    padding-top: 30px;
+}
 
+
+.about-img{
+    max-width: 90%;
+    border-radius:20%
+}
 .content .btn {
     margin: 1rem 0.2rem;
     

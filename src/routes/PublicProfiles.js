@@ -1,3 +1,4 @@
+import "./PublicProfilesStyles.css"
 
 import React, {Component} from 'react'
 import "./ProfilesStyles.css"
@@ -10,7 +11,7 @@ if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
 } 
 
-class Profiles extends Component {
+class PublicProfiles extends Component {
    constructor(props) {
     super(props);
     this.state = {
@@ -175,4 +176,4 @@ class Profiles extends Component {
   }
 }
 
-export default Profiles
+export default PublicProfiles

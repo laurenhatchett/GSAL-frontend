@@ -12,7 +12,7 @@ const Hero1Img = () => {
       src={hero1img} alt="intro" /> 
     </div>
     <div className="content">
-        <p>Go Save a Life is dedicated to helping people who are in need of a kidney transplant find a live donor.</p>
+        <p className='mission-statement'>Go Save a Life is dedicated to helping people who are in need of a kidney transplant find a live donor.</p>
         
         <div className="hero-btn-container">
         <Link to="/view-profiles"

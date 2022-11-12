@@ -6,8 +6,10 @@ import Profiles from "./routes/Profiles"
 import Footer from "./components/Footer"
 import NewForm from "./components/NewForm"
 import AboutUs from './routes/AboutUs'
+import PublicProfiles from "./routes/PublicProfiles"
 // import EditForm from './components/EditForm'
-
+// import EditForm from './components/EditForm'
+// import UpdateForm from './components/UpdateForm'
 
 let baseURL = ""
 
@@ -54,26 +56,7 @@ componentDidMount(){
          this.setState({profiles: copyProfiles});
        };
 
-      //  handleDelete = (profiles) => {
-      //   fetch(baseURL + '/profiles/' + profiles._id, {
-      //     method: 'DELETE'
-      //   }).then( response => {
-      //     const findIndex = this.state.profiles.findIndex(profiles => profiles._id )
-      //     const copyProfiles = [...this.state.profiles]
-      //     copyProfiles.splice(findIndex, 1)
-      //     this.setState({profiles: copyProfiles})
-      //   })
-      //   console.log("profiles", profiles)
-      // }
       
-      // handleEdit = (event,profiles) => {
-      // event.preventDefault()
-      //   console.log('hitting handleEdit in App.js')
-      // }
-
-      
-
-
       render () {
 
 
@@ -82,14 +65,17 @@ componentDidMount(){
     <div className="App">
         <>
       <Routes>
-       <Route path="/" element={<Home/>}/>
+       <Route exact path="/" element={<Home/>}/>
        <Route path="/about" element={<AboutUs/>}/>
        <Route path="/view-profiles" element={<Profiles profiles={this.state.profiles}/>}/>
        <Route path="/create" element={<NewForm handleAddProfile={this.handleAddProfile}/>}/>
-       {/* <Route path="/view-profiles" element={<Profiles handleDeleteProfile={this.handleDeleteProfile}/>}/> */}
-      <Route path="/view-profiles" element={<Profiles/>}/>
+       <Route path="/pubic-profiles" element={<PublicProfiles publicProfiles={this.state.profiles}/>}/>
 
-       {/* <Route path="/edit/:id" element={<EditForm profiles={this.state.profiles}/>}/> */}
+       {/* <Route path="/view-profiles" element={<Profiles handleDeleteProfile={this.handleDeleteProfile}/>}/> */}
+      {/* <Route path="/view-profiles" element={<Profiles/>}/> */}
+      {/* <Route path="/edit" element={<EditForm handleProfile={this.state.profiles}/>}/> */}
+
+       {/* <Route path="/update/:id" element={<UpdateForm profiles={this.state.profiles}/>}/> */}
 
       </Routes>
       <Footer/>
