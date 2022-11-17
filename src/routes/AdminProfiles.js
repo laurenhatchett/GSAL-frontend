@@ -1,16 +1,18 @@
 
 import React, {Component} from 'react'
-import "./ProfilesStyles.css"
+import "./AdminProfilesStyles.css"
 // import {Link} from "react-router-dom"
 import {AiOutlineDelete} from "react-icons/ai"
 import {BiEdit} from "react-icons/bi"
+import {MdPersonAddAlt} from "react-icons/md"
+import Nav1 from "../components/Navbar1"
 let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
 } 
 
-class Profiles extends Component {
+class AdminProfiles extends Component {
    constructor(props) {
     super(props);
     this.state = {
@@ -82,7 +84,7 @@ class Profiles extends Component {
       console.log(findIndex)
       const copyProfiles = [...this.state.profiles]
       this.setState({profiles: copyProfiles})
-      window.location.reload()
+      // window.location.reload()
        
         })
       
@@ -91,9 +93,13 @@ class Profiles extends Component {
     
   render() {
     return (
-     
+      <>
+      <Nav1/>
+        <h1 className="profiles-title">Admin Profiles</h1>
+      <div className="create-icon-container">
+      <MdPersonAddAlt className="create-icon"size={50} style={{color:"#222"}} onClick={() => window.location="/create"}/>
+      </div>
       <div className="all-profiles">
-        <h1 className="profiles-title">Profiles</h1>
         <div  className="all profiles">
         {this.props.profiles.map((profile, index) => {
           return (
@@ -145,7 +151,7 @@ class Profiles extends Component {
   
                       </form>
                   </div>
-                      
+                  
                         
 
                       {/* <div className="edit-btn">
@@ -171,8 +177,9 @@ class Profiles extends Component {
 
 
       </div>
+      </>
     );
   }
 }
 
-export default Profiles
+export default AdminProfiles

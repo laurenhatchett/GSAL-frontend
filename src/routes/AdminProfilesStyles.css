@@ -9,6 +9,15 @@
 .profile-img{
 max-width: 200px;
 }
+.create-icon-container{
+    max-width: 50px;
+    max-height: 50px;
+    padding-top: 10px;
+}
+.profiles-title{
+    padding-top: 100px;
+}
+
 
 /* .card:hover {
     box-shadow: 0 8px 16px 0 rgba(232, 19, 19, 0.733);

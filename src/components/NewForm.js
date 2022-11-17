@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import NewFormStyles from "./NewFormStyles.css"
+import "./newFormStyles.css"
 
 let baseURL = ""
 
@@ -60,7 +60,9 @@ class NewForm extends Component {
           imgURL: "",
           name: "",
           information:"" 
+          
         })
+        (window.location="/admin-profiles")
         //need to add a .then to redirect to view-profile
         // window.location.href=""
       })

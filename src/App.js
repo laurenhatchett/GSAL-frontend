@@ -2,14 +2,12 @@ import React, {Component} from 'react'
 import "./index.css"
 import {Route, Routes } from "react-router-dom"
 import Home from "./routes/Home"
-import Profiles from "./routes/Profiles"
+import AdminProfiles from "./routes/AdminProfiles"
 import Footer from "./components/Footer"
 import NewForm from "./components/NewForm"
 import AboutUs from './routes/AboutUs'
 import PublicProfiles from "./routes/PublicProfiles"
-// import EditForm from './components/EditForm'
-// import EditForm from './components/EditForm'
-// import UpdateForm from './components/UpdateForm'
+import ViewSingleProfile from "./components/ViewSingleProfile"
 
 let baseURL = ""
 
@@ -66,10 +64,11 @@ componentDidMount(){
         <>
       <Routes>
        <Route exact path="/" element={<Home/>}/>
-       <Route path="/about" element={<AboutUs/>}/>
-       <Route path="/view-profiles" element={<Profiles profiles={this.state.profiles}/>}/>
+       <Route path="/about" element={<AboutUs/>}/> 
+       <Route path="/admin-profiles" element={<AdminProfiles profiles={this.state.profiles}/>}/>
        <Route path="/create" element={<NewForm handleAddProfile={this.handleAddProfile}/>}/>
-       <Route path="/pubic-profiles" element={<PublicProfiles publicProfiles={this.state.profiles}/>}/>
+       <Route path="/public-profiles" element={<PublicProfiles profiles={this.state.profiles}/>}/>
+       <Route path="/profiles/:id" element={<ViewSingleProfile  profiles={this.state.profiles}   />}/>
 
        {/* <Route path="/view-profiles" element={<Profiles handleDeleteProfile={this.handleDeleteProfile}/>}/> */}
       {/* <Route path="/view-profiles" element={<Profiles/>}/> */}

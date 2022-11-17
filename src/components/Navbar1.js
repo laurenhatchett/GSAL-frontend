@@ -30,7 +30,10 @@ const Navbar = () => {
             <Link to ="/">Home</Link>
         </li>
         <li>
-            <Link to ="/view-profiles">View Profiles</Link>
+            <Link to ="/admin-profiles">Admin Profiles</Link>
+        </li>
+        <li>
+            <Link to ="/public-profiles">Public Profiles</Link>
         </li>
         <li>
             <Link to ="/create">Create A Profile</Link>

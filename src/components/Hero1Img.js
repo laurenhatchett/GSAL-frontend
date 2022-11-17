@@ -15,7 +15,7 @@ const Hero1Img = () => {
         <p className='mission-statement'>Go Save a Life is dedicated to helping people who are in need of a kidney transplant find a live donor.</p>
         
         <div className="hero-btn-container">
-        <Link to="/view-profiles"
+        <Link to="/public-profiles"
         className="btn btn-light">View Profiles</Link>
         <Link to="/about"
         className="btn btn-light">About Us</Link>
