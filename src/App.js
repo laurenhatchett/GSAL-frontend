@@ -7,8 +7,8 @@ import Footer from "./components/Footer"
 import NewForm from "./components/NewForm"
 import AboutUs from './routes/AboutUs'
 import PublicProfiles from "./routes/PublicProfiles"
-import ViewSingleProfile from "./components/ViewSingleProfile"
-
+import ViewSingleProfile from "./routes/ViewSingleProfile"
+import EditForm from "./routes/EditForm"
 let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
@@ -69,13 +69,9 @@ componentDidMount(){
        <Route path="/create" element={<NewForm handleAddProfile={this.handleAddProfile}/>}/>
        <Route path="/public-profiles" element={<PublicProfiles profiles={this.state.profiles}/>}/>
        <Route path="/profiles/:id" element={<ViewSingleProfile  profiles={this.state.profiles}   />}/>
+       <Route path="/profiles/:id/edit" element={<EditForm  profiles={this.state.profiles}   />}/>
 
-       {/* <Route path="/view-profiles" element={<Profiles handleDeleteProfile={this.handleDeleteProfile}/>}/> */}
-      {/* <Route path="/view-profiles" element={<Profiles/>}/> */}
-      {/* <Route path="/edit" element={<EditForm handleProfile={this.state.profiles}/>}/> */}
-
-       {/* <Route path="/update/:id" element={<UpdateForm profiles={this.state.profiles}/>}/> */}
-
+     
       </Routes>
       <Footer/>
      </>

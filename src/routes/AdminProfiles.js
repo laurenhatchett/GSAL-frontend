@@ -20,7 +20,6 @@ class AdminProfiles extends Component {
      imgURL: "",
      name: "",
     information:"",
-    showEdit: false
     };
    }
   
@@ -38,58 +37,58 @@ class AdminProfiles extends Component {
     console.log("profile deleted", profiles)
   }
 
-  handleEditChange = (event) => {
-    //grabs value (what user types in) and writes them to state
-    this.setState({
-      //grab all as an object-dynamically
-      [event.target.id]: event.target.value
-    })
-    console.log('handleChange', event.target.value)
-    console.log('edit this.state', this.state)
-  }  
+  // handleEditChange = (event) => {
+  //   //grabs value (what user types in) and writes them to state
+  //   this.setState({
+  //     //grab all as an object-dynamically
+  //     [event.target.id]: event.target.value
+  //   })
+  //   console.log('handleChange', event.target.value)
+  //   console.log('edit this.state', this.state)
+  // }  
 
-  handleUpdate =(profiles) =>{
-    console.log(profiles)
-  }
-  handleSubmitEdit =(profiles)=>{
+  // handleUpdate =(profiles) =>{
+  //   console.log(profiles)
+  // }
+  // handleSubmitEdit =(profiles)=>{
 
-    console.log("inside handleSubmitEdit", profiles)
-    // console.log(props.profiles._id)
-    // console.log(this.state.imgURL)
-    // console.log(this.state.name)
-    // console.log(this.state.information)
+  //   console.log("inside handleSubmitEdit", profiles)
+  //   // console.log(props.profiles._id)
+  //   // console.log(this.state.imgURL)
+  //   // console.log(this.state.name)
+  //   // console.log(this.state.information)
     
   
-    fetch(baseURL + '/profiles/' + profiles._id, {
-      method: 'PUT',
-      // body to send data as a string - take data given(this.state.name) and wrap in double quotes to turn it into a json object-AF
-      body: JSON.stringify({
-        imgURL: this.state.imgURL,
-        name:this.state.name,
-        information: this.state.information
+  //   fetch(baseURL + '/profiles/' + profiles._id, {
+  //     method: 'PUT',
+  //     // body to send data as a string - take data given(this.state.name) and wrap in double quotes to turn it into a json object-AF
+  //     body: JSON.stringify({
+  //       imgURL: this.state.imgURL,
+  //       name:this.state.name,
+  //       information: this.state.information
         
-      }),
-      // tell server we're sending application/json data
-      headers: {
-        'Content-Type': 'application/json'
-      }
-      // if above works - backend server creates new element and sends us new element 
-      //parse received string data back to res.json so we can use it
-    }).then(res => res.json())
-    //now that we have res.Json
-    .then(resJson => {
-      console.log(resJson)
+  //     }),
+  //     // tell server we're sending application/json data
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //     // if above works - backend server creates new element and sends us new element 
+  //     //parse received string data back to res.json so we can use it
+  //   }).then(res => res.json())
+  //   //now that we have res.Json
+  //   .then(resJson => {
+  //     console.log(resJson)
 
-      const findIndex = this.state.profiles.findIndex(profiles => profiles._id)
-      console.log(findIndex)
-      const copyProfiles = [...this.state.profiles]
-      this.setState({profiles: copyProfiles})
-      // window.location.reload()
+  //     const findIndex = this.state.profiles.findIndex(profiles => profiles._id)
+  //     console.log(findIndex)
+  //     const copyProfiles = [...this.state.profiles]
+  //     this.setState({profiles: copyProfiles})
+  //     // window.location.reload()
        
-        })
+  //       })
       
-      .catch((err) => {console.log(err)})
-    }
+  //     .catch((err) => {console.log(err)})
+  //   }
     
   render() {
     return (
@@ -107,41 +106,41 @@ class AdminProfiles extends Component {
                       <h3 className="profile-name">{profile.name}</h3>
                       <img className="profile-img" src={profile.imgURL} alt="profile" />
                       <h3 className="profile-info">{profile.information}</h3>
-                      {/* <Link to={'/detail/'+ profile._id}> */}
-                      {/* </Link> */}
+
                       <div className="btn-container">
                       <div className="delete-btn">
                       <AiOutlineDelete  size={35} style={{color:"#222"}} onClick={() => this.handleDelete(profile)} />
                       </div>
                       </div>
-                      <BiEdit size={35} style={{color:"#222"}} onClick={() => this.setState({showEdit: true})}/>
-                      
-                      <div className='edit-container'>
+                      <BiEdit size={35} style={{color:"#222"}} onClick={ () => window.location="/profiles/" + profile._id + "/edit"}/>
+                      {/* <Link to ={ "/profiles/" + profile._id + "/edit"}>Edit</Link> */}
+
+                      {/* <div className='edit-container'>
                         <form onSubmit={()=> this.handleSubmitEdit(profile)} className="new-profile-form">
+                            <input 
+                      
+                            id="name"
+                            type="text"
+                            onChange={(e) => {this.handleEditChange(e)}}
+                            value={this.state.name}
+                            placeholder={profile.name}
+                            className="profile-input"
+                            />
                             <input 
                     
                               id="imgURL"
                               type="text"
                               onChange={this.handleEditChange}
-                              value={this.state.imgURL}
-                              placeholder="image URL"
+                              value={profile.imgURL}
+                              // placeholder={profile.imgURL}
                               className="profile-input"
                               />
-                            <input 
-                      
-                            id="name"
-                            type="text"
-                            onChange={this.handleEditChange}
-                            value={this.state.name}
-                            placeholder="name"
-                            className="profile-input"
-                            />
                           <input 
                            id="information"
                           type="text"
                           onChange={this.handleEditChange}
-                          value={this.state.information}
-                          placeholder="information"
+                          value={profile.information}
+                          // placeholder={profile.information}
                           className="profile-input"
                            />
                           <input
@@ -150,22 +149,9 @@ class AdminProfiles extends Component {
                           className='form-submit-btn' />
   
                       </form>
-                  </div>
+                  </div> */}
                   
-                        
-
-                      {/* <div className="edit-btn">
-                      <Link to ={ "/profiles/" + profile._id}>Edit</Link>
-                      </div> */}
-                      {/* <div className="edit-btn">
-                      <Link to = "/edit">Edit</Link>
-                      </div> */}
-                      {/* <div className="view-btn">
-                      <button onClick={() => this.handleView(profile)} className='btn'>VIEW BIO</button>
-                      </div> */}
-                      
-
-                    
+                 
               </div>
               
 
