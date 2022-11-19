@@ -6,7 +6,9 @@ let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
-} 
+} else{
+  baseURL = process.env.REACT_APP_BACKEND_URL
+}
 class NewForm extends Component {
     constructor(props){
         super(props)
@@ -63,8 +65,7 @@ class NewForm extends Component {
           
         })
         (window.location="/admin-profiles")
-        //need to add a .then to redirect to view-profile
-        // window.location.href=""
+       
       })
       .catch((err) => {console.log(err)})
     }

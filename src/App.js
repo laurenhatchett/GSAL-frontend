@@ -13,7 +13,9 @@ let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
-} 
+} else{
+  baseURL = process.env.REACT_APP_BACKEND_URL
+}
 
 class App extends Component {
 
