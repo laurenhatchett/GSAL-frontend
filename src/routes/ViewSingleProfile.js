@@ -5,9 +5,10 @@ let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
-} else{
-  baseURL = process.env.REACT_APP_BACKEND_URL
-}
+} 
+// else{
+//   baseURL = process.env.REACT_APP_BACKEND_URL
+// }
 
 const ViewSingleProfile =(props) =>{
   let [bio, setProfile] = useState({})
