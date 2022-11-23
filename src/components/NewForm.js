@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
-import "./newFormStyles.css"
+
+import "../components/NewFormStyle.css"
 
 let baseURL = ""
 
