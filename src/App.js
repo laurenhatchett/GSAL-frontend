@@ -14,9 +14,9 @@ let baseURL = ""
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
 } 
-// else{
-//   baseURL = process.env.REACT_APP_BACKEND_URL
-// }
+else{
+  baseURL = process.env.REACT_APP_BACKEND_URL
+}
 
 class App extends Component {
 
@@ -66,7 +66,7 @@ componentDidMount(){
     <div className="App">
         <>
       <Routes>
-       <Route exact path="/" element={<Home/>}/>
+       <Route exact path="/" index element={<Home/>}/>
        <Route path="/about" element={<AboutUs/>}/> 
        <Route path="/admin-profiles" element={<AdminProfiles profiles={this.state.profiles}/>}/>
        <Route path="/create" element={<NewForm handleAddProfile={this.handleAddProfile}/>}/>

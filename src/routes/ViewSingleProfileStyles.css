@@ -1,0 +1,38 @@
+
+
+.view-container-child{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 700px;
+    height: 600px;
+    /* transition: 0.3s; */
+    margin-top: 50px;
+    border-radius: 5px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.view-container-parent{
+    max-width: 100%;
+    /* background-color: red; */
+}
+
+
+.view-profile-name{
+    font-size: 50px;
+    text-align: ;
+}
+
+.view-profile-img{
+    max-width: 50%
+}
+
+.view-profile-info{
+    font-size: 12px;
+}
+
+.info-container{
+    background-color: red;
+    max-width: inherit;
+    overflow-y:scroll;
+}
+

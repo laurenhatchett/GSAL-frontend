@@ -42,11 +42,14 @@ const ViewSingleProfile =(props) =>{
     return (
         
            <>    
-
-    <div>
-      <h3 className="profile-name">{bio.name}</h3>
-      <img className="profile-img" src={bio.imgURL} alt="profile" />
-      <h3 className="profile-info">{bio.information}</h3>
+    <div className="view-container-parent">
+    <div className="view-container-child">
+      <h3 className="view-profile-name">{bio.name}</h3>
+      <img className="view-profile-img" src={bio.imgURL} alt="profile" />
+      <div className="info-container">
+        <h3 className="view-profile-info">{bio.information}</h3>
+      </div>
+    </div>
     </div>
     </> 
   )
