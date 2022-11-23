@@ -9,14 +9,14 @@ const Footer = () => {
   return (
     <div className="footer">
         <div className="footer-container">
-            <div className="left">
-            <h3>LET'S CONNECT</h3>
+            
+            {/* <h3>LET'S CONNECT</h3> */}
                 <div className="phone">
-                    <h4><FaPhone size={20} style={{color: "#fff" , marginRight: "2rem"}} />
+                    <h4><FaPhone size={20} style={{color: "#fff" , marginRight: "1px"}} />
                     720-492-4814
                      </h4>
                 </div>
-                <div className="email"> <h4><FaMailBulk size={20} style={{color: "#fff" , marginRight: "2rem"}} />Gosavealifedonate@gmail.com
+                <div className="email"> <h4><FaMailBulk size={20} style={{color: "#fff" , marginRight: "1px"}} />Gosavealifedonate@gmail.com
                 </h4>
                 </div>
             
@@ -31,9 +31,10 @@ const Footer = () => {
                     <FaYoutube size={30} style={{color: "#000000" , marginRight: "1rem"}} />
                 </a>
                 </div>
-            </div>
+            
             
         </div>
+                <h6 className="developed-by">Application development by <a href ="https://www.linkedin.com/in/amanda-frisk-dev" className="Amanda">Amanda Frisk</a></h6>
     </div>
   )
 }

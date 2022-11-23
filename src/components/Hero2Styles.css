@@ -4,7 +4,7 @@
     position: relative;
 }
 .title-container{
-padding-top: 50px;
+padding-top: 90px;
 }
 .hero2img{
     width: 100%;
@@ -47,12 +47,13 @@ padding-top: 50px;
 }
 
 .about-info-container{
-    padding-top: 30px;
+    /* padding-top: 30px; */
 }
 
 
 .about-img{
-    max-width: 90%;
+    max-width: 80%;
+    max-height: 80%;
     border-radius:20%
 }
 .content .btn {
