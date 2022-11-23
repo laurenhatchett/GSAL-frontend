@@ -1,4 +1,21 @@
-.mask{
+.hero2-p{
+    color:white;
+    font-family: 'Montserrat 900';
+    font-size: 16px;
+}
+.hero2img{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+}
+
+.thanks{
+    color:rgb(249, 242, 242);
+    font-family: 'Montserrat 900';
+    font-size: 30px;
+}
+
+/* .mask{
     width: 100%;
     height: 100vh;
     position: relative;
@@ -46,9 +63,7 @@ padding-top: 90px;
     font-family: 'Montserrat 900';
 }
 
-.about-info-container{
-    /* padding-top: 30px; */
-}
+
 
 
 .about-img{
@@ -85,7 +100,7 @@ margin-top: 50px;
     background: grey;
     color: #fff;
     transition: 0.3s;
-  }
+  } */
 
 @media screen and (max-width: 640px){
     .hero .content h1{
