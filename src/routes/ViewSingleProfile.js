@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import "./ViewSingleProfileStyles.css"
 import { useParams } from 'react-router-dom'
-// import Nav1 from "../components/Navbar1"
+import Nav1 from "../components/Navbar1"
 let baseURL = ""
 
 if (process.env.NODE_ENV === 'development') {
@@ -44,7 +44,7 @@ const ViewSingleProfile =(props) =>{
         
            <> 
 
-{/* <Nav1/>    */}
+<Nav1/>   
     <div className="view-container-parent">
     <div className="view-container-child">
       <h3 className="view-profile-name">{bio.name}</h3>
