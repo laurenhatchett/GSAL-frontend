@@ -24,7 +24,7 @@ class PublicProfiles extends Component {
      <Nav1/>
       <div className="all-profiles">
         <h1 className="profiles-title">Profiles</h1>
-        <div  className="all profiles">
+        <div  className="all-profiles">
         {this.props.profiles.map((profile, index) => {
           return (
               <div className="card" key={index}>

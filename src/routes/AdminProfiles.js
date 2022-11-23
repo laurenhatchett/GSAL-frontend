@@ -97,6 +97,7 @@ class AdminProfiles extends Component {
     return (
       <>
       <Nav1/>
+      <div className='admin-profiles-container'>
         <h1 className="profiles-title">Admin Profiles</h1>
       <div className="create-icon-container">
       <MdPersonAddAlt className="create-icon"size={50} style={{color:"#222"}} onClick={() => window.location="/create"}/>
@@ -106,16 +107,19 @@ class AdminProfiles extends Component {
         {this.props.profiles.map((profile, index) => {
           return (
               <div className="card" key={index}>
+                      <div className="edit-icon-container">
+                      <BiEdit className="edit-icon"size={35} style={{color:"#222"}} onClick={ () => window.location="/profiles/" + profile._id + "/edit"}/>
+                      </div>
                       <h3 className="profile-name">{profile.name}</h3>
                       <img className="profile-img" src={profile.imgURL} alt="profile" />
+                      <div className="info-container">
                       <h3 className="profile-info">{profile.information}</h3>
-
+                      </div>
                       <div className="btn-container">
                       <div className="delete-btn">
                       <AiOutlineDelete  size={35} style={{color:"#222"}} onClick={() => this.handleDelete(profile)} />
                       </div>
                       </div>
-                      <BiEdit size={35} style={{color:"#222"}} onClick={ () => window.location="/profiles/" + profile._id + "/edit"}/>
                       {/* <Link to ={ "/profiles/" + profile._id + "/edit"}>Edit</Link> */}
 
                       {/* <div className='edit-container'>
@@ -165,6 +169,7 @@ class AdminProfiles extends Component {
 
 
 
+      </div>
       </div>
       </>
     );

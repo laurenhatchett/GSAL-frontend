@@ -13,17 +13,19 @@
 
 .view-container-parent{
     max-width: 100%;
+    max-height: 70%;
+    /* margin-top: 50px; */
     /* background-color: red; */
 }
 
 
 .view-profile-name{
-    font-size: 50px;
-    text-align: ;
+    font-size: 40px;
+ 
 }
 
 .view-profile-img{
-    max-width: 50%
+    max-width: 40%
 }
 
 .view-profile-info{
@@ -31,8 +33,12 @@
 }
 
 .info-container{
-    background-color: red;
-    max-width: inherit;
-    overflow-y:scroll;
+    max-width: 400px;
+    height: 200px ;
+    background: #f1f1f1;
+    padding:10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: auto;
 }
 
