@@ -2,14 +2,16 @@ import React, {useState, useEffect} from 'react';
 import "./ViewSingleProfileStyles.css"
 import { useParams } from 'react-router-dom'
 import Nav1 from "../components/Navbar1"
-let baseURL = ""
 
-if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3003'
-} 
-else{
-  baseURL = process.env.REACT_APP_BACKEND_URL
-}
+// let baseURL = ""
+// if (process.env.NODE_ENV === 'development') {
+//   baseURL = 'http://localhost:3003'
+// } 
+// else{
+//   baseURL = process.env.REACT_APP_BACKEND_URL
+// }
+
+let  baseURL = process.env.REACT_APP_BACKEND_URL
 
 const ViewSingleProfile =(props) =>{
   let [bio, setProfile] = useState({})
