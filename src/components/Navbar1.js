@@ -36,9 +36,6 @@ const Navbar = () => {
             <Link to ="/public-profiles">Public Profiles</Link>
         </li>
         <li>
-            <Link to ="/create">Create A Profile</Link>
-        </li>
-        <li>
             <Link to ="/about">About Us</Link>
         </li>
         
