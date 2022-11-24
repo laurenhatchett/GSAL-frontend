@@ -4,11 +4,7 @@ import React, {Component} from 'react'
 import "./PublicProfilesStyles.css"
 import {Link} from "react-router-dom"
 import Nav1 from "../components/Navbar1"
-// let baseURL = ""
 
-// if (process.env.NODE_ENV === 'development') {
-//   baseURL = 'http://localhost:3003'
-// } 
 
 class PublicProfiles extends Component {
    constructor(props) {

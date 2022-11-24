@@ -6,14 +6,17 @@ import {AiOutlineDelete} from "react-icons/ai"
 import {BiEdit} from "react-icons/bi"
 import {MdPersonAddAlt} from "react-icons/md"
 import Nav1 from "../components/Navbar1"
-let baseURL = ""
 
-if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3003'
-} 
-else{
-  baseURL = process.env.REACT_APP_BACKEND_URL
-}
+// let baseURL = ""
+// if (process.env.NODE_ENV === 'development') {
+//   console.log("process.env.NODE_ENV", process.env.NODE_ENV)
+//   baseURL = 'http://localhost:3003'
+// } 
+// else{
+//   baseURL = process.env.REACT_APP_BACKEND_URL
+// }
+
+let  baseURL = process.env.REACT_APP_BACKEND_URL
 
 class AdminProfiles extends Component {
    constructor(props) {

@@ -3,15 +3,17 @@ import React, {useState, useEffect} from 'react';
 import "./EditFormStyles.css"
 
 
-let baseURL = ""
+// let baseURL = ""
 
-if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3003'
-} 
-else{
-  baseURL = process.env.REACT_APP_BACKEND_URL
-}
+// if (process.env.NODE_ENV === 'development') {
+//   baseURL = 'http://localhost:3003'
+// } 
+// else{
+//   baseURL = process.env.REACT_APP_BACKEND_URL
+// }
 
+
+let  baseURL = process.env.REACT_APP_BACKEND_URL
 const EditForm = (props) => {
 
     let {id} = useParams()
@@ -41,9 +43,8 @@ const EditForm = (props) => {
         }
       // if above works - backend server creates new element and sends us new element 
       //parse received string data back to res.json so we can use it
-        }).then(res => console.log("check 46", res.json()))
-   
-      
+        }).then(res =>  console.log("check 46", res.json()))
+        
       .catch((err) => {console.log(err)})
     }
 
@@ -67,9 +68,12 @@ const getProfile =(id)=>{
         setName(res.name)
         setImgURL(res.imgURL)
         setInformation(res.information)
-        console.log(name)
-        console.log(imgURL)
-    })}
+        
+        // console.log(name)
+        // console.log(imgURL)
+        // console.log(information)
+    })
+  }
 
 
     useEffect(()=>{
@@ -79,7 +83,7 @@ const getProfile =(id)=>{
   return (
     <>
     <div>
-      <h1>Edit Form Here</h1>
+      <h1>Edit Form</h1>
     </div>
      <div className='edit-container'>
                         <form onSubmit={()=> handleSubmitEdit(id)} className="new-profile-form">
