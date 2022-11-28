@@ -1,35 +1,33 @@
-.card{
+.admin-card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 200px;
-    /* transition: 0.3s; */
-    /* margin-top: 50px; */
+    max-width: 250px;
+    margin-top: 50px;
     border-radius: 5px;
-    margin:auto;
+    max-height: 375px;
+    
 }
 
-.profile-img{
-max-width: 200px;
+.admin-profile-img{
+max-width:175px;
+max-height:175px;
 }
 .create-icon-container{
     max-width: 50px;
     max-height: 50px;
     padding-top: 10px;
 }
-.profiles-title{
+.admin-profiles-title{
     padding-top: 100px;
 }
 
-.profile-info{
+.admin-profile-info{
     font-size: 14px;
 }
 
-/* .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(232, 19, 19, 0.733);
-  } */
 
-  .info-container{
-    max-width: 400px;
-    height: 150px ;
+  .admin-info-container{
+    max-width: 300px;
+    height: 100px ;
     background: #f1f1f1;
     padding:10px;
     overflow: hidden;
@@ -37,25 +35,46 @@ max-width: 200px;
     margin: auto;
 }
 
-.all-profiles{
-    /* max-width: 400px;
-    height: 200px ; */
+.admin-all-profiles{
+     max-width: 100%;
+    height: 1000px ; 
     background: #f1f1f1;
-    padding:10px;
-    overflow: hidden;
-    overflow-x: scroll;
-    /* margin: auto; */
+    padding-top:0;
+    /* overflow: hidden;
+    overflow-x: scroll;  */
+    
+    margin-top:15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly
 }
+
 
 .edit-icon{
    float: right;
 
    
 }
-.edit-icon-container{
-overflow:hidden;
-}
+
 
 .delete-btn{
     text-align: center;
+   width: 40px;
+   
+
+}
+
+.delete-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(213, 49, 49, 0.733);
+  }
+
+.delete-btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+
+.admin-profile-name{
+    font-size: 16px;
 }
