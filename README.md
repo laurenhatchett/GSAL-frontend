@@ -64,8 +64,6 @@ As a user I want to be able to view a single profile to have access to all the p
 
 As a user I want to view the about us page to have access to more information about the non-profit organization.
 
-
-
 Technologies Used:
 
 Node.js |
@@ -75,6 +73,30 @@ Express |
 React|
 React Router 
 
+
+> Models -including field names and their datatypes<br />
+
+field | type | required
+-- | -- | -- | 
+imgURL | String | false | 
+name | String | true | 
+information | String | true | 
+<br />
+
+
+> A list of routes <br />
+
+Http Method | action | Path | Description
+-- | -- | -- | --
+GET | index | /| To fetch all profiles
+GET | new | /create| show form to enter new information
+POST | create | / | To create a profile
+GET | show | /:id | To view a specific profile
+GET | edit | /:id/edit| To get form already filled in for user to change
+PUT | update | :id | To edit a specific profile
+DELETE | destroy | /:id | To delete a specific profile
+
+
 Approach:
 
 Create an application that would be a tool for the non-profit as well as a place to direct people to find out more about the organization.
@@ -82,6 +104,17 @@ Create an application that would be a tool for the non-profit as well as a place
 Unsolved Problems:
 redirecting after edit form is submitted - going to use Navigate
 
+Installation Steps:
+
+In the terminal do the following steps-
+
+$ git clone {the url to the GitHub repo}
 
 
+cd into the new folder and type-
+$ npm install |
+$ npm install cors |
+npm install react- router-dom@6|
+npm install react-icons|
+$ npm start
 
