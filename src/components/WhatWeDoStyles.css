@@ -10,7 +10,7 @@
 .outreach-title{
     font-size: 3rem;
     font-weight: 50;
-    color:rgb(251, 245, 245);
+    color:rgb(251, 5, 5);
     font-family: 'Montserrat 900';
    padding-top: 50px;
    text-decoration: underline;
@@ -24,7 +24,7 @@
     font-weight: 50;
     color:rgb(251, 245, 245);
     font-family: 'Montserrat 900';
-   padding-top: 60px;
+   padding-top: 30px;
    padding-bottom: 20px;
 }
 .why-statement-container{
@@ -33,20 +33,25 @@
 
 .wrapper{
     height: 200px;
+    width: 100%;
     border: 1px solid rgb(251, 247, 247);
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-    /* background-color: rgb(215, 43, 43); */
+    
 }
 
-/* .wrapper::-webkit-scrollbar{
+.wrapper::-webkit-scrollbar{
    display: none;
-} */
+   
+}
+
+
 
 .wrapper .item-img{
     width: 200px;
     height: 200px;
     background-color: #ddd;
-    margin-right: 30px;
+    margin-right: 40px;
+    margin-left: 70px
 }
