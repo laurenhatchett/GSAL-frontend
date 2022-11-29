@@ -1,7 +1,7 @@
 .admin-card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     max-width: 250px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     border-radius: 5px;
     max-height: 375px;
     
@@ -46,7 +46,8 @@ max-height:175px;
     margin-top:15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly
+    justify-content:space-evenly;
+    padding-bottom: 10px;
 }
 
 
