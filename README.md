@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# GO Save A Life 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Go Save A Life is a non-profit founded by Kristian Reynolds of Colorado . Kristian started the non-profit to help connect people who need a kidney transplant with those willing to donate one. Kristian knowns first hand about this experience because he donated his kidney to someone and saved their life. This application is a tool for Kristian to use in his mission. As a CRUD application - He will be about to create, update and delete profiles for individuals who are on the transplant waiting list. In addition, the application can be used by the public to view profiles and find information about the non-profits mission.
 
-## Available Scripts
+The application is deployed through Heroku and can be accessed here: https://gsal-app.herokuapp.com/
 
-In the project directory, you can run:
+Forthcoming Features:
+Multiple screen size styling|
+Administrative log in/out as well as administrative only access to the CRUD features
 
-### `npm start`
+Initial Wireframe:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Screen Shot 2022-11-29 at 2 43 51 PM](https://user-images.githubusercontent.com/104706798/204654462-ea939208-1670-4925-acae-eb7a2f71c5bd.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Current Wireframe:
 
-### `npm test`
+HOME PAGE
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Screen Shot 2022-11-29 at 2 45 10 PM](https://user-images.githubusercontent.com/104706798/204654679-92ab5de9-0edf-4b4d-862c-15110d0d38fc.png)
 
-### `npm run build`
+SMALLER SCREEN NAV 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screen Shot 2022-11-29 at 2 45 29 PM](https://user-images.githubusercontent.com/104706798/204654738-fcacd21e-958f-4c87-885b-ba3c7c3dd072.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+VIEW ALL PUBLIC PROFILES
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Screen Shot 2022-11-29 at 2 46 39 PM](https://user-images.githubusercontent.com/104706798/204654937-0e2f4611-5825-4a31-a148-b670f45f9458.png)
 
-### `npm run eject`
+VIEW SINGLE PROFILE
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Screen Shot 2022-11-29 at 2 46 51 PM](https://user-images.githubusercontent.com/104706798/204654988-4f3e540b-e14f-43f0-b24b-6a98eefd46b2.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CREATE PROFILE FORM
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Screen Shot 2022-11-29 at 2 55 37 PM](https://user-images.githubusercontent.com/104706798/204656866-9a51053d-d0ca-425f-8395-4b798322f278.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+EDIT PROFILE FORM
+25
+![Screen Shot 2022-11-29 at 2 47 52 PM](https://user-images.githubusercontent.com/104706798/204655154-587d33e2-17c7-4d2c-b7a9-79a0957986a8.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ABOUT US 1 & 2
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Screen Shot 2022-11-29 at 2 48 11 PM](https://user-images.githubusercontent.com/104706798/204655194-3f571a6c-553f-46d5-ab58-a394795f1965.png)
 
-### Code Splitting
+![Screen Shot 2022-11-29 at 2 49 04 PM](https://user-images.githubusercontent.com/104706798/204655359-9bbec20a-a5f6-4182-94fd-30c3b0fd7317.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+User Stories:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+As a user I want to view the homepage and be able to easily navigate to the other pages of the application|
 
-### Making a Progressive Web App
+As a user I want to create a profile so that the public has access to the information|
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+As a user I want to view the all administrative profiles so that I can see the information and navigate to the other CRUD related tools.
 
-### Advanced Configuration
+As a user I want to edit the profile so that changes can be made when necessary.|
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+As a user I want to be able to delete a profile so that the application stays up to date.|
 
-### Deployment
+As I user I want to be able to view all the public profiles so that I can browse them and naviagate to individual profiles|
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+As a user I want to be able to view a single profile to have access to all the profile data. |
 
-### `npm run build` fails to minify
+As a user I want to view the about us page to have access to more information about the non-profit organization.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Technologies Used:
+
+Node.js |
+Mongoose |
+Mongodb Atlas |
+Express |
+React|
+React Router 
+
+Approach:
+
+Create an application that would be a tool for the non-profit as well as a place to direct people to find out more about the organization.
+
+Unsolved Problems:
+redirecting after edit form is submitted - going to use Navigate
+
+
+
+
