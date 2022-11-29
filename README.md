@@ -118,3 +118,5 @@ npm install react- router-dom@6|
 npm install react-icons|
 $ npm start
 
+The backend Github repo can be found here : https://github.com/AmandaFrisk/GSAL-backend
+
