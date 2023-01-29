@@ -26,11 +26,9 @@ class PublicProfiles extends Component {
               <div className="card" key={index}>
                       <h3 className="profile-name">{profile.name}</h3>
                       <img className="profile-img" src={profile.imgURL} alt="profile" />
-                      {/* <h3 className="profile-info">{profile.information}</h3> */}
 
                       <div className="btn-container">
                       <div className="view-btn">
-                      {/* <Link to ={ "/profiles/" + profile._id}>VIEW</Link> */}
                        <Link to ={ "/profiles/" + profile._id}>VIEW</Link>
 
                       </div> 

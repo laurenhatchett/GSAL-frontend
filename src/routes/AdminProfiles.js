@@ -43,59 +43,7 @@ class AdminProfiles extends Component {
     console.log("profile deleted", profiles)
   }
 
-  // handleEditChange = (event) => {
-  //   //grabs value (what user types in) and writes them to state
-  //   this.setState({
-  //     //grab all as an object-dynamically
-  //     [event.target.id]: event.target.value
-  //   })
-  //   console.log('handleChange', event.target.value)
-  //   console.log('edit this.state', this.state)
-  // }  
-
-  // handleUpdate =(profiles) =>{
-  //   console.log(profiles)
-  // }
-  // handleSubmitEdit =(profiles)=>{
-
-  //   console.log("inside handleSubmitEdit", profiles)
-  //   // console.log(props.profiles._id)
-  //   // console.log(this.state.imgURL)
-  //   // console.log(this.state.name)
-  //   // console.log(this.state.information)
-    
   
-  //   fetch(baseURL + '/profiles/' + profiles._id, {
-  //     method: 'PUT',
-  //     // body to send data as a string - take data given(this.state.name) and wrap in double quotes to turn it into a json object-AF
-  //     body: JSON.stringify({
-  //       imgURL: this.state.imgURL,
-  //       name:this.state.name,
-  //       information: this.state.information
-        
-  //     }),
-  //     // tell server we're sending application/json data
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //     // if above works - backend server creates new element and sends us new element 
-  //     //parse received string data back to res.json so we can use it
-  //   }).then(res => res.json())
-  //   //now that we have res.Json
-  //   .then(resJson => {
-  //     console.log(resJson)
-
-  //     const findIndex = this.state.profiles.findIndex(profiles => profiles._id)
-  //     console.log(findIndex)
-  //     const copyProfiles = [...this.state.profiles]
-  //     this.setState({profiles: copyProfiles})
-  //     // window.location.reload()
-       
-  //       })
-      
-  //     .catch((err) => {console.log(err)})
-  //   }
-    
   render() {
     return (
       <>

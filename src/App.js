@@ -9,6 +9,7 @@ import AboutUs from './routes/AboutUs'
 import PublicProfiles from "./routes/PublicProfiles"
 import ViewSingleProfile from "./routes/ViewSingleProfile"
 import EditForm from "./routes/EditForm"
+import { LoginPage } from './routes/Login'
 
 // let baseURL = ""
 // if (process.env.NODE_ENV === 'development') {
@@ -75,7 +76,7 @@ componentDidMount(){
        <Route path="/public-profiles" element={<PublicProfiles profiles={this.state.profiles}/>}/>
        <Route path="/profiles/:id" element={<ViewSingleProfile  profiles={this.state.profiles}   />}/>
        <Route path="/profiles/:id/edit" element={<EditForm  profiles={this.state.profiles}   />}/>
-
+       <Route path="/login" element={<LoginPage />} />
      
       </Routes>
       <Footer/>
