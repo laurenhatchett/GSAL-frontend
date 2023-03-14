@@ -36,7 +36,7 @@ CREATE PROFILE FORM
 
 
 EDIT PROFILE FORM
-25
+
 ![Screen Shot 2022-11-29 at 2 47 52 PM](https://user-images.githubusercontent.com/104706798/204655154-587d33e2-17c7-4d2c-b7a9-79a0957986a8.png)
 
 ABOUT US 1 & 2
