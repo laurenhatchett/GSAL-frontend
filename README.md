@@ -1,5 +1,7 @@
 # GO Save A Life 
 
+THIS PROJECT IS CURRENTLY UNDER DEVELOPMENT. WE ARE TRANSITIONING TO GROUP CONTRIBUTION TO CONTINUE BUILDING THIS APPLICATION OUT.
+
 Go Save A Life is a non-profit founded by Kristian Reynolds of Colorado . Kristian started the non-profit to help connect people who need a kidney transplant with those willing to donate one. Kristian knowns first hand about this experience because he donated his kidney to someone and saved their life. This application is a tool for Kristian to use in his mission. As a CRUD application - He will be about to create, update and delete profiles for individuals who are on the transplant waiting list. In addition, the application can be used by the public to view profiles and find information about the non-profits mission.
 
 The application is deployed through Heroku and can be accessed here: https://gsal-app.herokuapp.com/
