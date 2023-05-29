@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import styles from './SignUpFormStyles.css'
 import * as authService from '../../services/authService'
 
-const SignupForm = props => {
+const SignUpForm = props => {
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
@@ -125,4 +125,4 @@ const SignupForm = props => {
   )
 }
 
-export { SignupForm }
+export default SignUpForm 
